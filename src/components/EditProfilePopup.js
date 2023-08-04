@@ -33,14 +33,14 @@ function EditProfilePopup(props) {
   } 
 
   return(
-    <PopupWithForm onClose={onClose} onSubmit={handleSubmit} isOpened={isOpened} styleClass="profile" title="Редактировать профиль" name="edit_profile" buttonText="Сохранить"
-    children={<>
+    <PopupWithForm onClose={onClose} onSubmit={handleSubmit} isOpened={isOpened} styleClass="profile" title="Редактировать профиль" name="edit_profile" buttonText="Сохранить">
+    <>
     <input value={name} onChange={handleChangeName} className="popup__input" type="text" name="name" placeholder="Имя" id="name" minLength={2} maxLength={40} required />
     <span className="popup__input-error popup__input-error_name"></span>
     <input value={description} onChange={handleChangeDescription} className="popup__input" type="text" name="about" placeholder="О себе" id="about" minLength={2} maxLength={200} required />
     <span className="popup__input-error popup__input-error_about"></span>
-    </>}
-    />
+    </>
+    </PopupWithForm>
   );
 }
 
